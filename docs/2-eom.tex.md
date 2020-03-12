@@ -1,4 +1,8 @@
-
+---
+for: https://github.com/edxu96/FreqControl/tree/master/docs
+author: Edward J. Xu
+date: Mar 12, 2020
+---
 
 $$
 \begin{align}

@@ -1,6 +1,4 @@
-
-# Created by https://www.gitignore.io/api/macos,latex,matlab,python,sublimetext
-# Edit at https://www.gitignore.io/?templates=macos,latex,matlab,python,sublimetext
+files
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
