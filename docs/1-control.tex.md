@@ -1,5 +1,5 @@
 
-# Frequency Control of Power Systems
+# Static Analysis
 
 > When two utilities interconnect their systems, they do so for several reasons. One is to be able to buy and sell power with neighboring systems whose operating costs make such transactions profitable. Further, even if no power is being transmitted over ties to neighboring systems, if one system has a sudden loss of a generating unit, the units throughout all the interconnection will experience a frequency change and can help in restoring frequency. [_wood2014power_]
 
@@ -20,6 +20,11 @@ Two types of governor
 
 ## Droop Characteristics of Generators
 
+When there are multiple generators in a power system, generators
+
+- operate at the same frequency,
+- share and supply any load change in the system according to their droop characteristic.
+
 Droop characteristics of some generator shows how it react to some frequency change. It determines the change on the unit’s output for a given change in frequency. Note that the true value of droop is used in the calculation, while the percentage value is used when stated. "_Common practice is to set R on each generating unit so that a change from 0 to 100% (i.e., rated) output will result in the same frequency change for each unit. As a result, a change in electrical load on a system will be compensated by generator unit output changes proportional to each unit’s rated output._" [_wood2014power_] It is assumed that the droop of generator $i$, $R_{i}$, is fixed. Frequency bias $B_{i}$ of generator $i$ can be calculated by:
 
 $$
@@ -39,6 +44,18 @@ If $\Delta f$ is caused by a change of the system load $\Delta L$, then:
 $$ \Delta L = - B \Delta f $$
 
 because $P^{\text{new}} + L^{\text{new}} = (P^{\text{set}} + L^{\text{set}}) + (\Delta L - B \Delta f) = 0$ and $P^{\text{set}} + L^{\text{set}} = 0$.
+
+Instead, if $\Delta f$ is unknown, it can be calculated by:
+
+$$ \Delta f = - \Delta L / B $$
+
+If some generator trips, the system frequency bias will change accordingly, and the new steady state will be based on $B^{\text{new}}$.
+
+Infinite systems refer to those with the following features:
+
+- large interconnected system
+- dictates the frequency, while the unit only controls its power
+- any frequency change influences the power production of the units
 
 ## Appendix
 

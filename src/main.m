@@ -1,26 +1,20 @@
+addpath('~/GitHub/FreqControl/src')
+clear; clc
 
-function [] = init_mod_1()
+KOnline =
+TCH =
+dP =
+Kp =
+Ki =
+M =
+D =
+R =
 
-fic1 = 'filname';
-new_system(fic1)
-
-
-
-add_block('simulink/Sources/Step','filname/step1')
-add_block('simulink/Continuous/Transfer Fcn','filname/syst1')
-set_param('filname/step1', 'Position', [10 150 40 180 ] )
-set_param('filname/syst1','Denominator','[1000 1]')
-add_block('simulink/Sinks/To Workspace','filname/tw1')
-set_param('filname/tw1','SaveFormat','array')
-set_param('filname/tw1','VariableName','y')
-add_line('filname','step1/1','syst1/1');
-add_line('filname','syst1/1','tw1/1');
-set_param('filname','StopTime','inf')
-add_block('simulink/Sources/Clock','filname/tim')
-add_block('simulink/Sinks/To Workspace','filname/tw2')
-add_line('filname','tim/1','tw2/1');
-set_param('filname/tw2', 'Position', [200 350 230 380 ] )
-set_param('filname/tw2', 'SaveFormat','array')
-set_param('filname/tw2', 'VariableName','t')
-
-end
+resultSim = sim('modLoad_1', 'StartTime', '-50', 'StopTime', '150', ...
+  'FixedStep', '5');
+  
+figure(1)
+plot(resultSim.d_omega.time, ...
+  (resultSim.d_omega.signals.values) / (2 * pi) * 60)
+xlabel('Time [s]');
+ylabel('Rotational Speed [rpm]')
