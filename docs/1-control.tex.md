@@ -18,21 +18,19 @@ Two types of governor
 - isochronous (constant speed) governor for systems with only one generator
 - speed droop governor for systems with multiple generators
 
-## Droop Characteristics of Generating Units
+## Droop Characteristics of Generators
 
-Frequency bias $B_{i}$ of generator $i$ can be calculated by:
+Droop characteristics of some generator shows how it react to some frequency change. It determines the change on the unit’s output for a given change in frequency. Note that the true value of droop is used in the calculation, while the percentage value is used when stated. "_Common practice is to set R on each generating unit so that a change from 0 to 100% (i.e., rated) output will result in the same frequency change for each unit. As a result, a change in electrical load on a system will be compensated by generator unit output changes proportional to each unit’s rated output._" [_wood2014power_] It is assumed that the droop of generator $i$, $R_{i}$, is fixed. Frequency bias $B_{i}$ of generator $i$ can be calculated by:
 
 $$
 B_{i} = \frac{P^{\text{rated}}_{i}}{R_{i} \cdot f^{\text{rated}}_{i}}
 $$
 
-where $R_{i}$ is called droop, determining the change on the unit’s output for a given change in frequency. Note that the true value of droop is used in the calculation, while the percentage value is used when stated. _Common practice is to set R on each generating unit so that a change from 0 to 100% (i.e., rated) output will result in the same frequency change for each unit. As a result, a change in electrical load on a system will be compensated by generator unit output changes proportional to each unit’s rated output. [_wood2014power_]_
-
-If a frequency change $\Delta f$ is observed suddenly, changes in power productions of generators $\Delta P_{i}$ are proportional with their frequency bias. Then, the power of generator $i$ in new equilibrium $P^{\text{new}}_{i}$ will be:
+If a frequency change $\Delta f$ is observed suddenly, changes in power productions of generators $\Delta P_{i}$ are proportional with their frequency bias. Then, the power output of generator $i$ in the new steady state $P^{\text{new}}_{i}$ will be:
 
 $$ P^{\text{new}}_{i} = P^{\text{set}}_{i} + \Delta P_{i} = P^{\text{set}}_{i} - B_{i} \Delta f $$
 
-Then, the system power output in new equilibrium will be:
+Then, the system power output in the new steady state will be:
 
 $$ P^{\text{new}} = \sum_{i \in I} P^{\text{new}}_{i} = P^{\text{set}} - \Delta f \sum_{i \in I} B_{i} = P^{\text{set}} - B \Delta f $$
 
