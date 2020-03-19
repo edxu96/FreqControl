@@ -1,4 +1,6 @@
-# edxu96/FreqControl: Feedback Control of Power System Frequency in MATLAB
+# edxu96/FreqControl
+
+Feedback Control of Power System Frequency in MATLAB
 
 ## 1. Rotating Frequency
 
