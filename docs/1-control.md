@@ -1,5 +1,5 @@
 
-# Frequency Control of Power Systems
+# Static Analysis
 
 > When two utilities interconnect their systems, they do so for several reasons. One is to be able to buy and sell power with neighboring systems whose operating costs make such transactions profitable. Further, even if no power is being transmitted over ties to neighboring systems, if one system has a sudden loss of a generating unit, the units throughout all the interconnection will experience a frequency change and can help in restoring frequency. [_wood2014power_]
 
@@ -20,6 +20,11 @@ Two types of governor
 
 ## Droop Characteristics of Generators
 
+When there are multiple generators in a power system, generators
+
+- operate at the same frequency,
+- share and supply any load change in the system according to their droop characteristic.
+
 Droop characteristics of some generator shows how it react to some frequency change. It determines the change on the unit’s output for a given change in frequency. Note that the true value of droop is used in the calculation, while the percentage value is used when stated. "_Common practice is to set R on each generating unit so that a change from 0 to 100% (i.e., rated) output will result in the same frequency change for each unit. As a result, a change in electrical load on a system will be compensated by generator unit output changes proportional to each unit’s rated output._" [_wood2014power_] It is assumed that the droop of generator <img src="/docs/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/>, <img src="/docs/tex/82763aa72d7364a00f652e44d26604e9.svg?invert_in_darkmode&sanitize=true" align=middle width=17.132374049999992pt height=22.465723500000017pt/>, is fixed. Frequency bias <img src="/docs/tex/50b4930fbe0a5c05a9639621f664da50.svg?invert_in_darkmode&sanitize=true" align=middle width=17.11955024999999pt height=22.465723500000017pt/> of generator <img src="/docs/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&sanitize=true" align=middle width=5.663225699999989pt height=21.68300969999999pt/> can be calculated by:
 
 <p align="center"><img src="/docs/tex/0a392b5ecbccc852eae1522dd6c09d14.svg?invert_in_darkmode&sanitize=true" align=middle width=112.22890634999999pt height=41.50351095pt/></p>
@@ -37,6 +42,18 @@ If <img src="/docs/tex/5d287dab9fa370f57a1a7ca52c46f728.svg?invert_in_darkmode&s
 <p align="center"><img src="/docs/tex/ca65dcf19111584e23a6a04192cad9b3.svg?invert_in_darkmode&sanitize=true" align=middle width=96.39846975pt height=14.611878599999999pt/></p>
 
 because <img src="/docs/tex/cb31a0d19ca3fb20412e0a21da6103cd.svg?invert_in_darkmode&sanitize=true" align=middle width=348.37774785pt height=26.085962100000025pt/> and <img src="/docs/tex/5cb7a6e05a0be955c711699a6ff18487.svg?invert_in_darkmode&sanitize=true" align=middle width=108.27504764999999pt height=26.085962100000025pt/>.
+
+Instead, if <img src="/docs/tex/5d287dab9fa370f57a1a7ca52c46f728.svg?invert_in_darkmode&sanitize=true" align=middle width=23.516088749999987pt height=22.831056599999986pt/> is unknown, it can be calculated by:
+
+<p align="center"><img src="/docs/tex/1dd4d7d9430b1e4d5b2889f811a55619.svg?invert_in_darkmode&sanitize=true" align=middle width=104.61768239999999pt height=16.438356pt/></p>
+
+If some generator trips, the system frequency bias will change accordingly, and the new steady state will be based on <img src="/docs/tex/de9312bbb012c640f2bc77e87415bfad.svg?invert_in_darkmode&sanitize=true" align=middle width=35.95903574999999pt height=22.465723500000017pt/>.
+
+Infinite systems refer to those with the following features:
+
+- large interconnected system
+- dictates the frequency, while the unit only controls its power
+- any frequency change influences the power production of the units
 
 ## Appendix
 
