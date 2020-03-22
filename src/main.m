@@ -1,5 +1,7 @@
 close all, clear, clc
 
+addpath('~/GitHub/FreqControl/src')
+
 Punit=[1100 900 700 600];% Nominal Power
 I_pu=[0.28 1.33 1 1.49];% Inertia p.u in system base
 Runit=[0.05 0.05 0.05 0.05];% Droop
@@ -20,7 +22,7 @@ dP=Pset(3)/Pbase;% load change in MW
 fHz=50;
 
 %% Q3 a-e
-sim('Assignment1Q3Model');
+sim('modPowerSys');
 plotAnalysis(del_omega.time, fHz*(1+del_omega.signals.values), 49.62, ...
   'Frequency Response when G3 Trips', 'Q3d')
 plotAnalysisPower(del_omega.time, Pbase*del_Pmech.signals.values, 400, ...
@@ -28,21 +30,21 @@ plotAnalysisPower(del_omega.time, Pbase*del_Pmech.signals.values, 400, ...
 
 %% Q3 a-e
 D = 2 * D;
-sim('Assignment1Q3Model');
+sim('modPowerSys');
 plotAnalysis(del_omega.time, fHz*(1+del_omega.signals.values), 49.62, ...
   'Frequency Response when G3 Trips with Double Inertia', 'Q3f')
 D = 0.5 * D;
 
 %% Q3 f-g
 M = 2 * M;
-sim('Assignment1Q3Model');
+sim('modPowerSys');
 plotAnalysis(del_omega.time, fHz*(1+del_omega.signals.values), 49.62, ...
   'Frequency Response when G3 Trips with Double Damping', 'Q3g')
 M = 0.5 * M;
 
 %% Q3 h
 figure()
-sim('Assignment1Q3Model');
+sim('modPowerSys');
 hold on
 h = plot(del_omega.time, fHz*(1+del_omega.signals.values),'b');
 grid on 
@@ -50,7 +52,7 @@ pbaspect([2 1 1])
 
 %
 R = 0.02;% droop
-sim('Assignment1Q3Model'); 
+sim('modPowerSys'); 
 R = 0.05;% droop
 plot(del_omega.time, fHz*(1+del_omega.signals.values),'r');
 

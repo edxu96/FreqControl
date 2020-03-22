@@ -36,7 +36,7 @@ text(xSettle, ySteady - (ySteady) * 0.2, txt);
 legend([h1 h2 h3], {'Simulation Result', 'Theoretical New Steady State', ...
   '5% Error Band', '5% Error Band'}, 'Location', 'southeast');
 xlabel('Time [sec]');
-ylabel('Freq. [Hz]');
+ylabel('\Delta Pmech [N m]');
 xlim([-5 50]);
 ylim([0 600]);
 title(strTitle);
