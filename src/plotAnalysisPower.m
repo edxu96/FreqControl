@@ -1,4 +1,4 @@
-function plotAnalysisPower(vecXx, vecYy, ySteady, strTitle, strFileName)
+function plotAnalysisPower(vecXx, vecYy, strTitle, strFileName)
 %% Plot response of mechanical power in dynamic simulation
 figure()
 h1 = plot(vecXx, vecYy, 'color', 'r');
@@ -13,28 +13,38 @@ txt = sprintf(' overshoot maximum value \n x = %.2f, y = %.2f', xMax, yMax);
 text(xMax, yMax - 20, txt);
 
 %% Plot the new steady state
+ySteady = vecYy(end);
 h2 = plot([-50, 150], [ySteady ySteady], 'b--');
 txt = sprintf('new steady state %.2f', ySteady);
 text(35, ySteady + (ySteady) * 0.05, txt);
 
 %% Plot the 5% error band around the new the steady state value
-h3 = plot([-50, 150], ...
-  [ySteady + (ySteady) * 0.05, ySteady + (ySteady) * 0.05], 'k:');
-plot([-50, 150], ...
-  [ySteady - (ySteady) * 0.05, ySteady - (ySteady) * 0.05], 'k:');
+% h3 = plot([-50, 150], ...
+%   [ySteady + (ySteady) * 0.05, ySteady + (ySteady) * 0.05], 'k:');
+% plot([-50, 150], ...
+%   [ySteady - (ySteady) * 0.05, ySteady - (ySteady) * 0.05], 'k:');
 
 %% Plot the settling point
-iSettle = find(vecYy - (ySteady - (ySteady) * 0.05) <= 0, 1, 'last');
-xSettle = vecXx(iSettle);
-plot([xSettle xSettle], ...
-  [ySteady + (ySteady) * 0.2, ySteady - (ySteady) * 0.2], 'k');
+% iSettle = find(abs(vecYy - ySteady) >= 0.00000001, 1, 'last');
+% xSettle = vecXx(iSettle);
+% plot([xSettle xSettle], ...
+%   [ySteady + (ySteady) * 0.2, ySteady - (ySteady) * 0.2], 'k');
+% txt = sprintf(' settling point \n x = %.2f, y = %.2f', ...
+%   xSettle, ySteady - (ySteady) * 0.05);
+% text(xSettle, ySteady - (ySteady) * 0.2, txt);
+
+xSettle = vecXx(7688);
 txt = sprintf(' settling point \n x = %.2f, y = %.2f', ...
-  xSettle, ySteady - (ySteady) * 0.05);
-text(xSettle, ySteady - (ySteady) * 0.2, txt);
+  xSettle, ySteady);
+plot([xSettle xSettle], ...
+  [ySteady + 20, ySteady - 20], 'k');
+text(xSettle, ySteady - 50, txt);
+
 
 %% Decorations
-legend([h1 h2 h3], {'Simulation Result', 'Theoretical New Steady State', ...
-  '5% Error Band', '5% Error Band'}, 'Location', 'southeast');
+% legend([h1 h2 h3], {'Simulation Result', 'Theoretical New Steady State', ...
+%   '10% Error Band'}, 'Location', 'southeast');
+legend([h1 h2], {'Simulation Result', 'New Steady State in Simulation Result'}, 'Location', 'southeast');
 xlabel('Time [sec]');
 ylabel('\Delta Pmech [N m]');
 xlim([-5 50]);

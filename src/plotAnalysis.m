@@ -27,6 +27,7 @@ plot([-50, 150], ...
 
 %% Plot the settling point
 iSettle = find(vecYy - (ySteady - (50 - ySteady) * 0.05) <= 0, 1, 'last');
+iSettle
 xSettle = vecXx(iSettle);
 plot([xSettle xSettle], ...
   [ySteady + (50 - ySteady) * 0.5, ySteady - (50 - ySteady) * 0.5], 'k');
