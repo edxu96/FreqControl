@@ -13,8 +13,8 @@ Npp = 2;            % number of pole pairs  ???
 Ngear = 99.2;  % gear ratio
 Diam = 126;
 R = Diam / 2;
-I_rotor = 35444067;
-I_gen = 534;
+Irot = 35444067;
+Igen = 534;
 
 % Pitch Control Data
 Kp = 2;
@@ -53,6 +53,50 @@ Pref = [0.4 0.4 0.65] .* Pn_units;
 
 %%
 pitch_init_num = interp1( pitch_initial(:,1), pitch_initial(:,2), wind_init);
+
+%%
+% Nominal tip speed at rated power
+v_nom = 79.81; %[m/s]
+
+% Nominal speed of rotor
+
+omega_rotor_nom = v_nom / R;
+
+% Nominal speed of generator
+omega_gen_nom = omega_rotor_nom * Ngear;
+
+% Base Values
+
+% Omega Generator Base
+omega_gen_base = 2 * pi * fn / Npp;
+% Result: omega_gen_base = 157.0796 rad/s
+
+% Omega Rotor Base
+omega_rotor_base = omega_gen_base / Ngear;
+% Result: omega_rotor_base = 1.6362 rad/s
+
+% Pu Value of omega generator nominal
+omega_gen_nom_pu = omega_gen_nom / omega_gen_base;
+% Result: omega_gen_nom_pu = 1.0695 pu
+
+% Pu value of nominal rotor speed
+omega_rotor_nom_pu = omega_rotor_nom / omega_rotor_base;
+% Result: omega_rotor_nom_pu = 1.0695 pu
+
+
+
+
+
+%%
+omega_gen_base=2*pi*fn/Npp; 
+omega_rotor_base=omega_gen_base/Ngear; 
+Igen_base=Pbase_wt/omega_gen_base^2; Irot_base=Pbase_wt/omega_rotor_base^2; 
+Igen_pu=Igen/Igen_base;
+Irot_pu=Irot/Irot_base; 
+Iwt_pu=Igen_pu+Irot_pu;
+% The inertia in per-unit of a wind farm is equal with the inertia in per-unit of % a wind turbine, when an individual power based is used
+% Iwf_pu=Iwf/Iwf_base=(N*Iwt)/(N*Iwt_base)=Iwt_pu
+Iwf_pu=Iwt_pu;
 
 %%
 Pbase_ps = sum(Pn_units);
