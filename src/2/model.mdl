@@ -1,17 +1,17 @@
 Model {
-  Name			  "main"
+  Name			  "model"
   Version		  10.0
   SavedCharacterEncoding  "ISO-8859-1"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.23"
+    ComputedModelVersion    "1.25"
     NumModelReferences	    0
     NumTestPointedSignals   1
     TestPointedSignal {
       SignalName	      ""
-      FullBlockPath	      "main/Subsystem delta pu frequency control"
+      FullBlockPath	      "model/Subsystem delta pu frequency control"
       PortIndex		      2
       LogSignal		      1
       MaxPoints		      5000
@@ -67,7 +67,7 @@ Model {
       $ObjectID		      3
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [28.0, 3.0, 1670.0, 1077.0]
+      Location		      [81.0, 30.0, 1797.0, 1057.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		4
@@ -94,13 +94,35 @@ Model {
 	  IsTabbed		  [1]
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
-	  Extents		  [1632.0, 878.0]
-	  ZoomFactor		  [1.3720290829107349]
-	  Offset		  [121.2961346633416, -70.729624288033392]
-	  SceneRectInView	  [121.2961346633416, -70.729624288033392, 1189.4791592447455, 639.92812611328827]
+	  Extents		  [1759.0, 858.0]
+	  ZoomFactor		  [1.4801197092774687]
+	  Offset		  [122.0413056036972, -40.504694723560675]
+	  SceneRectInView	  [122.0413056036972, -40.504694723560675, 1188.4173887926056, 579.682842287695]
 	}
 	Object {
 	  $ObjectID		  7
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "153"
+	  Extents		  [1759.0, 878.0]
+	  ZoomFactor		  [1.0]
+	  Offset		  [-429.812430785478, -145.90118220885176]
+	  SceneRectInView	  [-429.812430785478, -145.90118220885176, 1759.0, 878.0]
+	}
+	Object {
+	  $ObjectID		  8
+	  IsActive		  [0]
+	  IsTabbed		  [0]
+	  ViewObjType		  "SimulinkSubsys"
+	  LoadSaveID		  "20"
+	  Extents		  [1759.0, 858.0]
+	  ZoomFactor		  [1.2215261958997723]
+	  Offset		  [-171.06295558844383, -52.502564102564079]
+	  SceneRectInView	  [-171.06295558844383, -52.502564102564079, 1440.0018648018647, 702.4]
+	}
+	Object {
+	  $ObjectID		  9
 	  IsActive		  [0]
 	  IsTabbed		  [0]
 	  ViewObjType		  "SimulinkSubsys"
@@ -109,28 +131,6 @@ Model {
 	  ZoomFactor		  [8.0]
 	  Offset		  [479.55859375000023, 62.749999999999972]
 	  SceneRectInView	  [479.55859375000023, 62.749999999999972, 204.0, 121.375]
-	}
-	Object {
-	  $ObjectID		  8
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "153"
-	  Extents		  [1632.0, 971.0]
-	  ZoomFactor		  [1.2214626949139433]
-	  Offset		  [-4.6413555953865853, -106.97427573644018]
-	  SceneRectInView	  [-4.6413555953865853, -106.97427573644018, 1336.1030236907732, 794.94855147288035]
-	}
-	Object {
-	  $ObjectID		  9
-	  IsActive		  [0]
-	  IsTabbed		  [0]
-	  ViewObjType		  "SimulinkSubsys"
-	  LoadSaveID		  "20"
-	  Extents		  [1402.0, 878.0]
-	  ZoomFactor		  [1.25]
-	  Offset		  [-81.504687499999818, -223.6]
-	  SceneRectInView	  [-81.504687499999818, -223.6, 1121.6, 702.4]
 	}
 	Object {
 	  $ObjectID		  10
@@ -164,7 +164,7 @@ Model {
       "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABrAP///wAAAAEAAAAAAAAAAPwCA"
       "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAaGAAADjQAAAAEAAAACAAAAAQAAAAL8AAAAAA=="
+      "QBjAHQAbwByAAAAAAD/////AAAAOQD///8AAAcFAAADeQAAAAEAAAACAAAAAQAAAAL8AAAAAA=="
       Array {
 	Type			"Cell"
 	Dimension		0
@@ -181,9 +181,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "edxu96"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon May 04 15:11:17 2020"
-  RTWModifiedTimeStamp	  510505099
-  ModelVersionFormat	  "1.%<AutoIncrement:23>"
+  LastModifiedDate	  "Wed May 06 15:01:29 2020"
+  RTWModifiedTimeStamp	  510678084
+  ModelVersionFormat	  "1.%<AutoIncrement:25>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -245,13 +245,13 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    12
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "main"
+    model_		    "model"
     signals_		    []
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "main"
+      Cell		      "model"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1644,8 +1644,8 @@ Model {
     }
   }
   System {
-    Name		    "main"
-    Location		    [28, 3, 1698, 1080]
+    Name		    "model"
+    Location		    [81, 30, 1878, 1087]
     Open		    on
     PortBlocksUseCompactNotation off
     SetExecutionDomain	    off
@@ -1660,7 +1660,7 @@ Model {
     TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "137"
+    ZoomFactor		    "148"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "158"
     SimulinkSubDomain	    "Simulink"
@@ -1685,49 +1685,49 @@ Model {
 	    Type		    "edit"
 	    Name		    "fn"
 	    Prompt		    "Nominal frequency [Hz]"
-	    Value		    "0"
+	    Value		    "50"
 	  }
 	  Object {
 	    $ObjectID		    30
 	    Type		    "edit"
 	    Name		    "act_freq_high"
 	    Prompt		    "Higher Activation Frequency [Hz]"
-	    Value		    "0"
+	    Value		    "50.05"
 	  }
 	  Object {
 	    $ObjectID		    31
 	    Type		    "edit"
 	    Name		    "act_freq_low"
 	    Prompt		    "Lower Activation Frequency [Hz]"
-	    Value		    "0"
+	    Value		    "49.95"
 	  }
 	  Object {
 	    $ObjectID		    32
 	    Type		    "edit"
 	    Name		    "droop"
 	    Prompt		    "Droop [%]"
-	    Value		    "0"
+	    Value		    "4"
 	  }
 	  Object {
 	    $ObjectID		    33
 	    Type		    "edit"
 	    Name		    "TCH"
 	    Prompt		    "Time constant of prime mover [s]"
-	    Value		    "0"
+	    Value		    "10"
 	  }
 	  Object {
 	    $ObjectID		    34
 	    Type		    "edit"
 	    Name		    "Pnom"
 	    Prompt		    "Nominal Capacity of Biomass [W]"
-	    Value		    "0"
+	    Value		    "200e6"
 	  }
 	  Object {
 	    $ObjectID		    35
 	    Type		    "edit"
 	    Name		    "Pbase_total"
 	    Prompt		    "Power System Base [W]"
-	    Value		    "0"
+	    Value		    "1200e6"
 	  }
 	  PropName		  "Parameters"
 	}
@@ -1877,28 +1877,28 @@ Model {
 	    Type		    "edit"
 	    Name		    "act_freq"
 	    Prompt		    "Activation Frequency"
-	    Value		    "0"
+	    Value		    "48.9"
 	  }
 	  Object {
 	    $ObjectID		    38
 	    Type		    "edit"
 	    Name		    "prop_PL0"
 	    Prompt		    "Proportion of load to be disconnected[%]"
-	    Value		    "0"
+	    Value		    "10"
 	  }
 	  Object {
 	    $ObjectID		    39
 	    Type		    "edit"
 	    Name		    "Total_load"
 	    Prompt		    "Total Load [W]"
-	    Value		    "0"
+	    Value		    "1080"
 	  }
 	  Object {
 	    $ObjectID		    40
 	    Type		    "edit"
 	    Name		    "Pbase_sys"
 	    Prompt		    "Power System Base [W]"
-	    Value		    "0"
+	    Value		    "1200e6"
 	  }
 	  PropName		  "Parameters"
 	}
@@ -2513,7 +2513,7 @@ Model {
       }
       System {
 	Name			"Subsystem\ndelta pu frequency control"
-	Location		[258, 3, 1698, 1080]
+	Location		[122, 270, 1919, 1327]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2528,7 +2528,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"125"
+	ZoomFactor		"122"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -2810,7 +2810,7 @@ Model {
       ContentPreviewEnabled   on
       System {
 	Name			"VSWT"
-	Location		[28, 3, 1698, 1080]
+	Location		[28, 3, 1825, 1080]
 	Open			off
 	PortBlocksUseCompactNotation off
 	SetExecutionDomain	off
@@ -2825,7 +2825,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"122"
+	ZoomFactor		"100"
 	SimulinkSubDomain	"Simulink"
 	Block {
 	  BlockType		  Inport
@@ -2846,6 +2846,17 @@ Model {
 	}
 	Block {
 	  BlockType		  Gain
+	  Name			  "1 / Ngear1"
+	  SID			  "104"
+	  Position		  [625, 190, 655, 220]
+	  ZOrder		  16
+	  Gain			  "1 / Ngear"
+	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	}
+	Block {
+	  BlockType		  Gain
 	  Name			  "1/Ngear"
 	  SID			  "103"
 	  Position		  [1080, 305, 1110, 335]
@@ -2859,22 +2870,11 @@ Model {
 	}
 	Block {
 	  BlockType		  Gain
-	  Name			  "1/Ngear1"
-	  SID			  "104"
-	  Position		  [625, 190, 655, 220]
-	  ZOrder		  16
-	  Gain			  "1/Ngear"
-	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Gain
 	  Name			  "1/omega_gen_base"
 	  SID			  "105"
 	  Position		  [635, 480, 665, 510]
 	  ZOrder		  15
-	  Gain			  "1/omega_gen_base"
+	  Gain			  "1 / omega_gen_base"
 	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 	  SaturateOnIntegerOverflow off
@@ -2921,12 +2921,12 @@ Model {
 	}
 	Block {
 	  BlockType		  Gain
-	  Name			  "P_wt"
+	  Name			  "Pn_wt"
 	  SID			  "109"
 	  Position		  [1080, 430, 1110, 460]
 	  ZOrder		  12
 	  BlockRotation		  270
-	  Gain			  "P_wt"
+	  Gain			  "Pn_wt"
 	  ParamDataTypeStr	  "Inherit: Inherit via internal rule"
 	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
 	  SaturateOnIntegerOverflow off
@@ -3617,7 +3617,7 @@ Model {
 	  SrcBlock		  "MPPT table\n(electrical control)"
 	  SrcPort		  1
 	  Points		  [160, 0]
-	  DstBlock		  "P_wt"
+	  DstBlock		  "Pn_wt"
 	  DstPort		  1
 	}
 	Line {
@@ -3659,7 +3659,7 @@ Model {
 	}
 	Line {
 	  ZOrder		  73
-	  SrcBlock		  "P_wt"
+	  SrcBlock		  "Pn_wt"
 	  SrcPort		  1
 	  Points		  [0, -75]
 	  DstBlock		  "Divide1"
@@ -3674,7 +3674,7 @@ Model {
 	}
 	Line {
 	  ZOrder		  70
-	  SrcBlock		  "1/Ngear1"
+	  SrcBlock		  "1 / Ngear1"
 	  SrcPort		  1
 	  Points		  [50, 0]
 	  Branch {
@@ -3740,7 +3740,7 @@ Model {
 	      Branch {
 		ZOrder			77
 		Points			[0, -135]
-		DstBlock		"1/Ngear1"
+		DstBlock		"1 / Ngear1"
 		DstPort			1
 	      }
 	      Branch {
