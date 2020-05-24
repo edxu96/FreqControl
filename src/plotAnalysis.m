@@ -6,6 +6,7 @@ figure()
 h1 = plot(vecXx, vecYy, 'color', 'r');
 hold on
 grid on
+grid minor
 pbaspect([2 1 1])
 
 %% Plot the minimum value
@@ -17,7 +18,7 @@ text(xMin, yMin, txt);
 %% Plot the new steady state
 h2 = plot([-50, 150], [ySteady ySteady], 'b--');
 txt = sprintf('new steady state %.2f', ySteady);
-text(35, ySteady + 0.1, txt);
+text(80, ySteady + 0.1, txt);
 
 %% Plot the 5% error band around the new the steady state value
 h3 = plot([-50, 150], ...
@@ -36,15 +37,15 @@ txt = sprintf(' settling point \n x = %.2f, y = %.2f', ...
 text(xSettle, ySteady - (50 - ySteady) * 0.5, txt);
 
 %% Decorations
-legend([h1 h2 h3], {'Simulation Result', 'Theoretical New Steady State', ...
+legend([h1 h2 h3], {'Simulation Result', 'New Steady State', ...
   '10% Error Band', '10% Error Band'}, 'Location', 'southeast');
 xlabel('Time [sec]');
 ylabel('Freq. [Hz]');
-xlim([-5 50]);
-ylim([48 50.4]);
+xlim([-10 100]);
+ylim([48.7 50.5]);
 title(strTitle);
 
 hold off
-saveas(h1, [strFileName, '.png']);
+saveas(h1, strFileName, 'epsc');
 
 end

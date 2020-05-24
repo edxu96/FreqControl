@@ -92,6 +92,8 @@ online = [1 1 1];
 % system inertia without wind power per unit
 M = (sum(online .* Iconv_units .* Pn_units) + 200e6 * 8) / (Pbase_ps + 200e6);
 
+
+Konline = (sum(online .* Iconv_units .* Pn_units) + 200e6 * 8) / Pbase_ps;  % ???
 Nwt = 2 * 200e6 / Pn_wt;  % ???
 Kwt2pu = Nwt / Pbase_ps;
 

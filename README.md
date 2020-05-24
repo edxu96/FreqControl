@@ -8,6 +8,8 @@ Feedback Control of Power System Frequency in MATLAB
 
 _Figure 1. Mechanical and electrical torques in a generating unit. [_wood2014power_]_
 
+
+
 ## 2. Automatic Generation Control (AGC)
 
 > Automatic generation control (AGC) is the name given to a control system having three major objectives: [_wood2014power_]
@@ -17,6 +19,8 @@ _Figure 1. Mechanical and electrical torques in a generating unit. [_wood2014pow
 ![](./images/2.png)
 
 _Figure 2. Tie-line bias supplementary control for two areas. [_wood2014power_]_
+
+
 
 ---
 
