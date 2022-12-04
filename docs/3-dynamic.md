@@ -2,6 +2,8 @@
 
 ## EoM with Varying Loading Torque
 
-<p align="center"><img src="/docs/tex/6506d37638e18b92e206f83bc9a11e8c.svg?invert_in_darkmode&sanitize=true" align=middle width=281.6611182pt height=44.89738935pt/></p>
+$$
+K_{\text{online}} = \sum_{i}^{n} \frac{k_{i} \cdot P^{\text {base}}_{i}}{P^{\text{base}}} = \sum_{i}^{n} \frac{k_{i} \cdot P^{\text {rate}}_{i}}{\sum_{i}^{n} P^{\text{rate}}_{i}}
+$$
 
-where <img src="/docs/tex/1aa404900509b299796d763b8eed32f7.svg?invert_in_darkmode&sanitize=true" align=middle width=124.98912194999998pt height=27.91243950000002pt/>
+where $P^{\text{base}} = \sum_{i}^{n} P^{\text{rate}}_{i}$
